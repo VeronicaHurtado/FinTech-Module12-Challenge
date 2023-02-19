@@ -82,6 +82,10 @@ Model 2 Classification Report Imbalanced
   * High-risk loan = `1.00`
   * Average/Total = `1.00`
 
+This model is able to predict the "Healthy loan" category with both precision and recall scores of `100%`, while 
+predicting the "High-risk loan" category with an `87%` precision and a `100%` recall. Although the precision could be 
+more accurate, the recall has improved considerably for the minority class, thus reducing the number of False Negatives.
+
 * *False Positives*: Number of transactions incorrectly identified as High-risk loans = 91
 * *False Negatives*: Number of transactions incorrectly identified as Healthy loans = 2
 
