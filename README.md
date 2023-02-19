@@ -18,16 +18,21 @@ imbalanced classes.
 ```
 (TP + TN) / (TP + TN + FP + FN)
 ```
+
 **Precision** is the ratio of correctly predicted positive observations to the total predicted positive observations. 
 High precision relates to a low false positive rate.
 ```
 TP / (TP + FP)
 ```
+
 **Recall** is the ratio of correctly predicted positive observations to all predicted observations for that class.
 ```
 TP / (TP + FN)
 ```
-**Classification Report** identifies the Precision, Recall and Accuracy of a model for each given class.
-**Confusion Matrix**
+
+**Classification Report** is used to identify the Precision, Recall and Accuracy of a model for each given class.
+
+**Confusion Matrix** is used to identify the Model's recall. If FNs are very undesirable then it is best to use a Model 
+with high recall.
 
 Source: Monash University, [FinTech Boot Camp](https://bootcamps.monash.edu/fintech) learning material.
