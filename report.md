@@ -2,32 +2,32 @@
 
 ## Overview of the Analysis
 
-* Purpose of the analysis.
-> TBD
+The Purpose of this analysis is to identify which Model is better suited to accurately predict the Status (Healthy 
+or Risky) for Loan Applications based on features such as the Loan Size, Interest Rate, Borrower Income, Debt to Income 
+ratio, Number of Accounts, Derogatory Marks and Total Debt.
 
-The data source for this analysis is in the [lending_data.csv](Resources/lending_data.csv) file. 
+The data to be used for this analysis is stored in the [lending_data.csv](Resources/lending_data.csv) file. 
 
 ![Lending Data](Images/Lending_data_sample.png)
-The data available for predictions has a lot more occurrences of Healthy Loans, where `loan_status = 0`, compared to the
-number of transactions classified as High-risk Loans, where `loan_status = 1`. This means the data is imbalanced, 
-favouring the identification of "Healthy Loans".
 
-
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-> TBD
+After importing the csv file into a Pandas DataFrame, using the `value_counts` function exposes that the data available 
+for predictions has a lot more occurrences of Healthy Loans, where `loan_status = 0`, compared to the number of 
+transactions classified as High-risk Loans, where `loan_status = 1`. This means the data is imbalanced, favouring the 
+identification of "Healthy Loans".
 
 * Describe the stages of the machine learning process you went through as part of this analysis.
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
 > The first Model to perform the predictions is created using LogisticRegression...
-> 
->
 
 ## Results
 
-### Machine Learning Model 1: Logistic Regression
+### Machine Learning Model 1: Logistic Regression with Original Data
 
 ![Model1_confusion_matrix](Images/Model1_confusion_matrix.png)
+Model 1 Confusion Matrix
+
 ![Model1_classification_report_imbalanced](Images/Model1_classification_report_imbalanced.png)
+Model 1 Classification Report Imbalanced
 
 * **Balanced Accuracy Score** = `0.9442`
 * **Precision Score** Healthy loan = `1.00` | High-risk loan = `0.87` | Average/Total = `0.99`
@@ -42,7 +42,7 @@ are "Healthy loans". This demonstrates the sample data is imbalanced.
 *False Negatives*: Number of transactions wrongly identified as Healthy Loans (Low Risk) = 67
 
 
-### Machine Learning Model 2:
+### Machine Learning Model 2: Logistic Regression with Resampled Training Data
   * Description of Model 2 Accuracy, Precision, and Recall scores.
 
 ## Summary
